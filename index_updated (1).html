@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S.L.E.E.K</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: white;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Sticky Navbar -->
+  <nav class="sticky-nav shadow-md py-4 px-6 flex justify-between items-center">
+    <img src="sleek-logo.png" alt="SLEEK Logo" class="h-10">
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="text-green-600">Home</a>
+      <a href="#about" class="text-green-600">About</a>
+      <a href="#services" class="text-green-600">Services</a>
+      <a href="#shop" class="text-green-600">Shop</a>
+      <a href="#contact" class="text-green-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-green-100" data-aos="fade-up">
+    <div class="text-center px-4">
+      <h2 class="text-4xl font-bold mb-4 text-green-700">Welcome to S.L.E.E.K</h2>
+      <p class="text-lg mb-6">Smart. Limitless. Elegant. Effective. Keen.</p>
+      <a href="#shop" class="bg-green-600 text-white px-6 py-3 rounded-full">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 bg-white" data-aos="fade-up">
+    <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+    <p>S.L.E.E.K is your all-in-one mobile-friendly shopping solution. We offer fashion, accessories, tools, utensils and more, with direct delivery to your location via WhatsApp.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-6 bg-green-50" data-aos="fade-up">
+    <h3 class="text-2xl font-semibold mb-6">Our Services</h3>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Easy Online Purchase</li>
+      <li>Direct WhatsApp Orders</li>
+      <li>Fast and Reliable Delivery</li>
+    </ul>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="py-16 px-6 bg-white" data-aos="fade-up">
+    <h3 class="text-2xl font-semibold mb-6">Shop Items</h3>
+    <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-white" data-aos="fade-up">
+    <h3 class="text-2xl font-semibold mb-6">Contact Us</h3>
+    <form action="https://formspree.io/f/xayraoqz" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border rounded" required>
+      <textarea name="message" placeholder="Your Message" class="w-full p-2 border rounded" required></textarea>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send Message</button>
+    </form>
+    <div class="mt-4">
+      <a href="https://wa.me/2348100123242" class="text-green-600 underline">Order via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="py-6 text-center bg-green-100">
+    <p>&copy; 2025 S.L.E.E.K. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/2348100123242" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
+    💬
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const products = [
+      { name: "Item 1", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%201" },
+      { name: "Item 2", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%202" },
+      { name: "Item 3", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%203" },
+      { name: "Item 4", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%204" },
+      { name: "Item 5", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%205" },
+      { name: "Item 6", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%206" },
+      { name: "Item 7", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%207" },
+      { name: "Item 8", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%208" },
+      { name: "Item 9", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%209" },
+      { name: "Item 10", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2010" },
+      { name: "Item 11", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2011" },
+      { name: "Item 12", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2012" },
+      { name: "Item 13", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2013" },
+      { name: "Item 14", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2014" },
+      { name: "Item 15", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2015" },
+      { name: "Item 16", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2016" },
+      { name: "Item 17", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2017" },
+      { name: "Item 18", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2018" },
+      { name: "Item 19", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2019" },
+      { name: "Item 20", link: "https://wa.me/2348100123242?text=Hi%2C%20I'm%20interested%20in%20Item%2020" }
+    ];
+    const grid = document.getElementById('product-grid');
+    products.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'p-4 border rounded shadow hover:shadow-lg';
+      div.innerHTML = `<h4 class="font-semibold mb-2">${p.name}</h4>
+                       <a href="${p.link}" target="_blank" class="text-green-600 underline">Order via WhatsApp</a>`;
+      grid.appendChild(div);
+    });
+  </script>
+
+  <div class="fixed bottom-4 left-4 bg-white border rounded-full shadow-md flex items-center px-3 py-1 w-60">
+    <input type="text" id="search-input" placeholder="Search products..." class="outline-none flex-1 p-1 text-sm">
+  </div>
+  <script>
+    document.getElementById('search-input').addEventListener('input', function(e) {
+      const searchValue = e.target.value.toLowerCase();
+      const items = document.querySelectorAll('#product-grid > div');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(searchValue) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+<!-- Admin Panel (Hidden Until Login) -->
+<section id="admin-login" class="py-16 px-6 bg-gray-50">
+  <h3 class="text-2xl font-semibold mb-4">Admin Login</h3>
+  <input type="password" id="admin-password" placeholder="Enter Admin Password" class="w-full p-2 border rounded mb-4">
+  <button onclick="verifyAdmin()" class="bg-green-600 text-white px-4 py-2 rounded">Login</button>
+  <p id="login-status" class="text-red-500 mt-2"></p>
+</section>
+
+<section id="admin-panel" class="hidden py-16 px-6 bg-white">
+  <h3 class="text-2xl font-semibold mb-6">Upload New Product</h3>
+  <form id="product-form" class="space-y-4">
+    <input type="text" id="product-name" placeholder="Product Name" class="w-full p-2 border rounded" required>
+    <input type="text" id="product-image" placeholder="Image URL" class="w-full p-2 border rounded" required>
+    <input type="text" id="product-price" placeholder="Price (e.g., $10 or ₦5000)" class="w-full p-2 border rounded" required>
+    <input type="text" id="product-link" placeholder="WhatsApp Link" class="w-full p-2 border rounded" required>
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Upload Product</button>
+    <p id="upload-status" class="text-green-600 mt-2"></p>
+  </form>
+</section>
+
+</body>
+
+
+<script>
+  const ADMIN_PASSWORD = "AGBEKEADENIKE";
+  const SHEET_API_URL = "https://sheet.best/api/sheets/1xBaf5HQ5j6dsIs4syGPx28XH_Xn_rg9TYJXC6MMz_D8";
+
+  function verifyAdmin() {
+    const input = document.getElementById('admin-password').value;
+    if (input === ADMIN_PASSWORD) {
+      document.getElementById('admin-login').style.display = 'none';
+      document.getElementById('admin-panel').classList.remove('hidden');
+    } else {
+      document.getElementById('login-status').innerText = "Incorrect password.";
+    }
+  }
+
+  document.getElementById('product-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('product-name').value;
+    const image = document.getElementById('product-image').value;
+    const price = document.getElementById('product-price').value;
+    const link = document.getElementById('product-link').value;
+
+    fetch(SHEET_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ Name: name, ImageURL: image, Price: price, WhatsAppLink: link })
+    })
+    .then(res => res.json())
+    .then(() => {
+      document.getElementById('upload-status').innerText = "Product uploaded successfully!";
+      document.getElementById('product-form').reset();
+    })
+    .catch(() => {
+      document.getElementById('upload-status').innerText = "Upload failed. Try again.";
+    });
+  });
+
+  // Replace static JS product list with dynamic fetch from sheet
+  fetch(SHEET_API_URL)
+    .then(res => res.json())
+    .then(data => {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = "";
+      data.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'p-4 border rounded shadow hover:shadow-lg';
+        div.innerHTML = `
+          <img src="${p.ImageURL}" alt="${p.Name}" class="w-full h-40 object-cover mb-2 rounded">
+          <h4 class="font-semibold mb-1">${p.Name}</h4>
+          <p class="text-sm mb-2">${p.Price}</p>
+          <a href="${p.WhatsAppLink}" target="_blank" class="text-green-600 underline">Order via WhatsApp</a>`;
+        grid.appendChild(div);
+      });
+    });
+</script>
+
+</html>
